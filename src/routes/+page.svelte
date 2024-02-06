@@ -7,6 +7,7 @@
   import DfMessenger from "../components/DfMessenger.svelte";
   import TopNav from "../components/TopNav.svelte";
   import BottomBar from "../components/BottomBar.svelte";
+  import BookShelf from "../components/BookShelf.svelte";
 
   let showFloatingActionBtn: Boolean = false;
 
@@ -76,7 +77,11 @@
     </div>
   </div>
 
-  <div class="mb-2 mt-[10vh]">
+  <div class="fixed bottom-[12vw] left-[12vw]">
+    <BookShelf />
+  </div>
+
+  <div class="mb-2 mt-[12vh]">
     <BottomBar />
   </div>
 </div>
