@@ -8,6 +8,8 @@
   import TopNav from "../components/TopNav.svelte";
   import BottomBar from "../components/BottomBar.svelte";
   import BookShelf from "../components/BookShelf.svelte";
+  import { savedItemState, showBookShelf } from "../store";
+  import ShoppingCartBtn from "../components/ShoppingCartBtn.svelte";
 
   let showFloatingActionBtn: Boolean = false;
 
@@ -77,10 +79,6 @@
     </div>
   </div>
 
-  <div class="fixed bottom-[12vw] left-[12vw]">
-    <BookShelf />
-  </div>
-
   <div class="mb-2 mt-[12vh]">
     <BottomBar />
   </div>
@@ -89,5 +87,19 @@
 <GradientWave />
 
 {#if showFloatingActionBtn}
-  <FloatingActionBtn />
+  <div class="fixed bottom-10 right-10">
+    <FloatingActionBtn />
+  </div>
+{/if}
+
+{#if $savedItemState.entities.length > 0}
+  <div class="fixed bottom-10 left-10">
+    <ShoppingCartBtn />
+  </div>
+
+  {#if $showBookShelf}
+    <div class="fixed bottom-24 left-24">
+      <BookShelf />
+    </div>
+  {/if}
 {/if}

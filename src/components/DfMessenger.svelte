@@ -1,9 +1,7 @@
 <script lang="ts">
-  import { v4 as uuidv4 } from "uuid";
   import { onMount } from "svelte";
   import { extractBookTitle } from "../utils";
-  import { savedItemState, type InfoCardEventDetail, addSavedItem } from "../store";
-  import { get } from "svelte/store";
+  import { type InfoCardEventDetail, addSavedItem } from "../store";
   import { MASK_UNIQUE_ID, maskGenerator } from "./generated-elements/mask";
   import {
     CARD_ACTION_BTN_UNIQUE_ID,
@@ -11,12 +9,9 @@
   } from "./generated-elements/cardActionBtn";
 
   type ParamKey = "k";
+  const paramKeys: ParamKey[] = ["k"];
 
   const BASE_URL: string = import.meta.env.VITE_BASE_URL;
-  const url = new URL(BASE_URL);
-  url.pathname = "/s";
-
-  const paramKeys: ParamKey[] = ["k"];
 
   // TODO: use zod to validate the return type
   function isCustomEvent(event: Event): event is CustomEvent<InfoCardEventDetail> {
@@ -49,6 +44,9 @@
         throw new Error("actionLink is not provided");
       }
 
+      // url must be initialized here, otherwise, it will get replaced each time the event is fired
+      const url = new URL(BASE_URL);
+      url.pathname = "/s";
       url.searchParams.set(paramKeys[0], title);
 
       // When df-info-card is clicked, it means we already have user and bot entries.
@@ -88,8 +86,9 @@
         selectedLink.appendChild(mask);
       }
 
-      const onClick = () => {
-        window.open(url, "_blank");
+      const onClick = (e: MouseEvent) => {
+        e.preventDefault();
+        addSavedItem({ title, actionLink, purchaseLink: url.href });
       };
 
       const addBtn = cardActionBtnGenerator({
@@ -101,9 +100,7 @@
         selectedLink.appendChild(addBtn);
       }
 
-      addSavedItem({ title, actionLink, purchaseLink: url.href });
-
-      console.log(get(savedItemState));
+      // console.log(get(savedItemState));
     });
   });
 </script>

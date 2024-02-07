@@ -38,3 +38,14 @@ export const addSavedItem = (item: SavedItem) => {
     };
   });
 };
+
+export const deleteSavedItem = (actionLink: string) => {
+  savedItemState.update((state) => {
+    return {
+      ...state,
+      entities: state.entities.filter((entity) => entity.actionLink !== actionLink),
+    };
+  });
+};
+
+export let showBookShelf = writable(false);

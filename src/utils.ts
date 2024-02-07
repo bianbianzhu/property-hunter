@@ -23,3 +23,7 @@ export function extractBookTitle(url: string | undefined): string {
   const bookTitle = url.substring(startIndex, endIndex).replace(/-/g, " ");
   return bookTitle.trim();
 }
+
+export function capitalize(text: string) {
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
