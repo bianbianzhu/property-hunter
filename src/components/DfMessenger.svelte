@@ -8,11 +8,6 @@
     cardActionBtnGenerator,
   } from "./generated-elements/cardActionBtn";
 
-  type ParamKey = "k";
-  const paramKeys: ParamKey[] = ["k"];
-
-  const BASE_URL: string = import.meta.env.VITE_BASE_URL;
-
   // TODO: use zod to validate the return type
   function isCustomEvent(event: Event): event is CustomEvent<InfoCardEventDetail> {
     return "detail" in event;
@@ -38,16 +33,10 @@
       }
 
       const { actionLink } = event.detail;
-      const title = extractBookTitle(actionLink);
 
       if (!actionLink) {
         throw new Error("actionLink is not provided");
       }
-
-      // url must be initialized here, otherwise, it will get replaced each time the event is fired
-      const url = new URL(BASE_URL);
-      url.pathname = "/s";
-      url.searchParams.set(paramKeys[0], title);
 
       // When df-info-card is clicked, it means we already have user and bot entries.
       // If outside the listener callback, only getElementsByClassName('entry bot') works.
@@ -116,8 +105,8 @@
     class="drop-shadow-lg"
     max-query-length="-1">
     <df-messenger-chat
-      chat-title="Book.com - Chat with our Literary Bot"
+      chat-title="Ask AI Assistant: Get Instant Help"
       bot-writing-text="..."
-      placeholder-text="Ask me anything about the Book.com..." />
+      placeholder-text="How can I assist you today? Type your question here..." />
   </df-messenger>
 </div>

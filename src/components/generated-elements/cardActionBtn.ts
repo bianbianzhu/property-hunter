@@ -18,7 +18,7 @@ export const cardActionBtnGenerator = (option: Option): HTMLButtonElement => {
   btn.style.alignItems = "center"; // items-center
   btn.style.justifyContent = "center"; // justify-center
   btn.style.borderRadius = "50%"; // rounded-full
-  btn.style.backgroundColor = "#10B981"; // bg-emerald-500
+  btn.style.backgroundColor = "#FBBF24";
   btn.style.color = "white"; // text-white
   btn.style.zIndex = "2";
   btn.style.boxShadow = "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)";

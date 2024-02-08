@@ -42,8 +42,8 @@
 
   onMount(() => {
     // Write and send sample questions to chatbot
-    // sendInput("Hello", 2000);
-    // sendInput("Suggest me a book?", 6000);
+    sendInput("Hello", 2000);
+    sendInput("How much Melbourne home prices could rise in 2024?", 6000);
 
     const resizeObserver = new ResizeObserver((entries) => {
       // entries[0].target.clientHeight is equal to document.body.scrollHeight
@@ -57,20 +57,21 @@
 <TopNav />
 
 <div class="container mx-auto flex flex-col items-center">
-  <div class="max-h-full max-w-full">
-    <div class="mt-[15vh] flex gap-12">
+  <div class="max-h-full w-full">
+    <Heading tag="h1" class="mb-2 mt-[5vh] text-center text-5xl font-bold leading-snug"
+      >Property Hunter, Your Ultimate Property Guide.</Heading>
+    <div class="mt-[8vh] flex min-h-[55vh] gap-16">
       <div class="w-2/5">
-        <Heading tag="h1" class="mb-2 text-5xl font-bold leading-snug"
-          >Find the book you’re looking for in a second.</Heading>
         <p class="mt-5 font-normal text-gray-500 dark:text-gray-400">
-          The most appropriate AI book site to reach books
+          Discover. Connect. Secure Your Dream Home.
         </p>
 
-        <Heading tag="h5" class="my-2 mt-6 text-green-400">How it works</Heading>
-        Ask the chatbot on the right about books in our Store, such as
-        <DialogBox prompt="Suggest me a book about AI?" boxWidth={50} />
+        <Heading tag="h5" class="my-2 mt-6 text-amber-500">How it works</Heading>
+        Ask a question and get a response from our AI agent. For example:
+
+        <DialogBox prompt="what is the housing market like in Melbourne?" boxWidth={75} />
         <span class="text-bold font-bold">Or</span>
-        <DialogBox prompt="What are the best books for beginners?" />
+        <DialogBox prompt="which suburb in melbourne grows the fastest?" boxWidth={75} />
       </div>
 
       <div class="w-3/5">
@@ -79,7 +80,7 @@
     </div>
   </div>
 
-  <div class="mb-2 mt-[12vh]">
+  <div class="mb-2 mt-[8vh]">
     <BottomBar />
   </div>
 </div>

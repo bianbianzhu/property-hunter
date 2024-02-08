@@ -11,7 +11,7 @@ export type InfoCardEventDetail = {
 type Item = Required<Pick<InfoCardEventDetail, "title" | "actionLink">>;
 
 type SavedItem = Item & {
-  purchaseLink: string;
+  agentResponse: string;
 };
 
 type SavedItemState = {
@@ -23,7 +23,7 @@ export const savedItemState = writable<SavedItemState>({
 });
 
 export const addSavedItem = (item: SavedItem) => {
-  const { title, actionLink, purchaseLink } = item;
+  const { title, actionLink, agentResponse } = item;
 
   savedItemState.update((state) => {
     const isDuplicate = state.entities.some((entity) => entity.actionLink === actionLink);
@@ -34,7 +34,7 @@ export const addSavedItem = (item: SavedItem) => {
 
     return {
       ...state,
-      entities: [...state.entities, { title, actionLink, purchaseLink }],
+      entities: [...state.entities, { title, actionLink, agentResponse }],
     };
   });
 };

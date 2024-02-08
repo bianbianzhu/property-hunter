@@ -1,6 +1,5 @@
 <script lang="ts">
   import { deleteSavedItem, savedItemState, showBookShelf } from "../store";
-  import bookIcon from "../assets/book-icon-m.png";
   import { capitalize } from "../utils";
 
   const close = () => {
@@ -14,18 +13,18 @@
   role="list"
   class="relative max-w-md divide-y divide-gray-100 overflow-hidden rounded-xl bg-white shadow-xl">
   {#each $savedItemState.entities as entity (entity.actionLink)}
-    <li class="flex justify-between gap-x-3 p-3 py-5 odd:bg-green-50">
+    <li class="flex justify-between gap-x-3 p-3 py-5 odd:bg-amber-50">
       <div class="flex min-w-0 gap-x-4">
-        <img class="h-12 w-12 flex-none rounded-full bg-gray-50" src={bookIcon} alt="" />
+        <img class="h-12 w-12 flex-none rounded-full bg-gray-50" src={""} alt="" />
         <div class="min-w-0 flex-auto">
-          <a href={entity.purchaseLink} target="_blank">{capitalize(entity.title)}</a>
-          <p class="mt-1 truncate text-xs leading-5 text-gray-500">{entity.purchaseLink}</p>
+          <a href={entity.actionLink} target="_blank">{capitalize(entity.title)}</a>
+          <p class="mt-1 truncate text-xs leading-5 text-gray-500">{entity.agentResponse}</p>
         </div>
       </div>
 
       <button on:click={remove(entity.actionLink)} class="scale-75">
         <svg
-          fill="#16A34A"
+          fill="#D97706"
           width="24px"
           height="24px"
           viewBox="0 0 36 36"
@@ -55,7 +54,7 @@
 </ul>
 
 <button
-  class="absolute -right-3 -top-3 inline-block flex h-8 w-8 items-center justify-center rounded-full bg-green-400 leading-none text-white shadow-lg hover:bg-green-600"
+  class="absolute -right-3 -top-3 inline-block flex h-8 w-8 items-center justify-center rounded-full bg-amber-500 leading-none text-white shadow-lg hover:bg-amber-600"
   on:click={close}>
   <svg
     class="h-4 w-4"

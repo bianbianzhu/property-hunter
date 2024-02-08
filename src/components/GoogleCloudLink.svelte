@@ -7,7 +7,7 @@
   <span class="text-red-600">o</span>
   <span class="text-yellow-500">o</span>
   <span class="text-blue-600">g</span>
-  <span class="text-green-500">l</span>
+  <span class="text-amber-500">l</span>
   <span class="text-red-600">e</span>
   <span class="ml-1 text-gray-500">Cloud</span>
 </A>

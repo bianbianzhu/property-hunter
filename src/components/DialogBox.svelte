@@ -5,7 +5,7 @@
 
 <div class={`relative my-3 rounded-lg bg-white p-3 shadow-lg`} style="width: {boxWidth}%;">
   <div
-    class="absolute -bottom-3 -right-2 flex h-6 w-6 rotate-90 items-center justify-center rounded-full bg-emerald-500 text-white">
+    class="absolute -bottom-3 -right-2 flex h-6 w-6 rotate-90 items-center justify-center rounded-full bg-amber-500 text-white">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"

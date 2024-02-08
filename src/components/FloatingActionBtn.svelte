@@ -27,7 +27,7 @@
 </script>
 
 <button
-  class="relatvie rounded bg-green-400 p-3"
+  class="relatvie rounded bg-amber-400 p-3 shadow-sm"
   on:click={isArrowUp ? scrollToTop : scrollToBottom}
   style={isArrowUp ? "transform: rotate(180deg)" : ""}>
   <svg
