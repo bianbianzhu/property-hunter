@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { deleteSavedItem, savedItemState, showBookShelf } from "../store";
+  import { deleteSavedItem, savedItemState, showBookShelf } from "../store/saved-response";
   import { capitalize } from "../utils";
 
   const close = () => {

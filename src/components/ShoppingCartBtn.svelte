@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { savedItemState, showBookShelf } from "../store";
+  import { savedItemState, showBookShelf } from "../store/saved-response";
 
   const toggleBookShelf = () => {
     showBookShelf.update((n) => !n);

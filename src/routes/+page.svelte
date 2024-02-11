@@ -8,7 +8,7 @@
   import TopNav from "../components/TopNav.svelte";
   import BottomBar from "../components/BottomBar.svelte";
   import BookShelf from "../components/BookShelf.svelte";
-  import { savedItemState, showBookShelf } from "../store";
+  import { savedItemState, showBookShelf } from "../store/saved-response";
   import ShoppingCartBtn from "../components/ShoppingCartBtn.svelte";
 
   let showFloatingActionBtn: Boolean = false;
@@ -42,8 +42,9 @@
 
   onMount(() => {
     // Write and send sample questions to chatbot
-    sendInput("Hello", 2000);
-    sendInput("How much Melbourne home prices could rise in 2024?", 6000);
+    // sendInput("Hello", 2000);
+    sendInput("How much Melbourne home prices could rise in 2024?", 100);
+    sendInput("What is the housing affordability in 2023", 5000);
 
     const resizeObserver = new ResizeObserver((entries) => {
       // entries[0].target.clientHeight is equal to document.body.scrollHeight

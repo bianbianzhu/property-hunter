@@ -1,14 +1,7 @@
 import { writable } from "svelte/store";
+import type { DfInfoCardEventDetail } from "../types/dfMessenger-types";
 
-export type InfoCardEventDetail = {
-  title?: string;
-  image?: {
-    src: { rawUrl: string };
-  };
-  actionLink?: string;
-};
-
-type Item = Required<Pick<InfoCardEventDetail, "title" | "actionLink">>;
+type Item = Required<Pick<DfInfoCardEventDetail, "title" | "actionLink">>;
 
 type SavedItem = Item & {
   agentResponse: string;

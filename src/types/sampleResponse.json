@@ -1,0 +1,525 @@
+{
+  "messages": [
+    {
+      "type": "text",
+      "text": "I think you'll find this link helpful"
+    },
+    {
+      "type": "customCard",
+      "richElements": [
+        {
+          "title": "Interest rate changes tipped to shape 2024 real estate market | CoreLogic Australia",
+          "actionLink": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2024-interest-rate-changes-tipped-to-shape-2024-real-estate-market.html#:~:text=Nearly%20half%20(46%25),more%20than%205%25.",
+          "subtitle": "Nearly half (46%) of respondents anticipate a rise in house prices this year of between 1-5%, while a further 13%…",
+          "type": "info",
+          "id": "c3633a10-968f-464a-b4ce-65f842736b57"
+        }
+      ]
+    }
+  ],
+  "data": {
+    "messages": [
+      {
+        "type": "text",
+        "text": "I think you'll find this link helpful"
+      },
+      {
+        "type": "customCard",
+        "richElements": [
+          {
+            "title": "Interest rate changes tipped to shape 2024 real estate market | CoreLogic Australia",
+            "actionLink": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2024-interest-rate-changes-tipped-to-shape-2024-real-estate-market.html#:~:text=Nearly%20half%20(46%25),more%20than%205%25.",
+            "subtitle": "Nearly half (46%) of respondents anticipate a rise in house prices this year of between 1-5%, while a further 13%…",
+            "type": "info",
+            "id": "c3633a10-968f-464a-b4ce-65f842736b57"
+          }
+        ]
+      }
+    ]
+  },
+  "raw": {
+    "responseId": "64cda44a-1e24-4e52-b183-b35fa327ef82",
+    "queryResult": {
+      "text": "How much Melbourne home prices could rise in 2024?",
+      "languageCode": "en",
+      "responseMessages": [
+        {
+          "text": {
+            "text": ["I think you'll find this link helpful"],
+            "redactedText": ["I think you'll find this link helpful"],
+            "containAiGeneratedContent": true,
+            "containDataStoreContent": true,
+            "containAttemptedDataStoreInteractions": true,
+            "containGroundingFailures": true
+          },
+          "responseType": "HANDLER_PROMPT",
+          "source": "VIRTUAL_AGENT"
+        },
+        {
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "title": "Interest rate changes tipped to shape 2024 real estate market | CoreLogic Australia",
+                  "actionLink": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2024-interest-rate-changes-tipped-to-shape-2024-real-estate-market.html#:~:text=Nearly%20half%20(46%25),more%20than%205%25.",
+                  "subtitle": "Nearly half (46%) of respondents anticipate a rise in house prices this year of between 1-5%, while a further 13%…",
+                  "type": "info",
+                  "id": "c3633a10-968f-464a-b4ce-65f842736b57"
+                }
+              ]
+            ]
+          },
+          "responseType": "HANDLER_PROMPT",
+          "source": "VIRTUAL_AGENT"
+        }
+      ],
+      "currentPage": {
+        "name": "projects/project-xiaobao-20240126/locations/global/agents/bae6ed2d-ee81-438a-b294-c944a7abba9f/flows/00000000-0000-0000-0000-000000000000/pages/START_PAGE",
+        "displayName": "Start Page"
+      },
+      "diagnosticInfo": {
+        "Execution Sequence": [
+          {
+            "Step 1": {
+              "InitialState": {
+                "Event": "",
+                "FlowState": {
+                  "Name": "Default Start Flow",
+                  "PageState": {
+                    "Name": "Start Page",
+                    "Status": "ENTERING_PAGE",
+                    "PageId": "START_PAGE"
+                  },
+                  "FlowId": "00000000-0000-0000-0000-000000000000",
+                  "Version": 0
+                }
+              },
+              "Type": "INITIAL_STATE"
+            }
+          },
+          {
+            "Step 2": {
+              "FunctionExecution": {
+                "Responses": [
+                  {
+                    "source": "VIRTUAL_AGENT",
+                    "responseType": "HANDLER_PROMPT",
+                    "text": {
+                      "containAttemptedDataStoreInteractions": true,
+                      "containDataStoreContent": true,
+                      "containGroundingFailures": true,
+                      "containAiGeneratedContent": true,
+                      "text": ["I think you'll find this link helpful"]
+                    }
+                  },
+                  {
+                    "responseType": "HANDLER_PROMPT",
+                    "source": "VIRTUAL_AGENT",
+                    "payload": {
+                      "richContent": [
+                        [
+                          {
+                            "title": "Interest rate changes tipped to shape 2024 real estate market | CoreLogic Australia",
+                            "type": "info",
+                            "actionLink": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2024-interest-rate-changes-tipped-to-shape-2024-real-estate-market.html#:~:text=Nearly%20half%20(46%25),more%20than%205%25.",
+                            "subtitle": "Nearly half (46%) of respondents anticipate a rise in house prices this year of between 1-5%, while a further 13%…"
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              },
+              "StateMachine": {
+                "FlowState": {
+                  "Name": "Default Start Flow",
+                  "PageState": {
+                    "PageId": "START_PAGE",
+                    "Name": "Start Page",
+                    "Status": "TRANSITION_ROUTING"
+                  },
+                  "FlowId": "00000000-0000-0000-0000-000000000000",
+                  "Version": 0
+                },
+                "TriggeredTransitionRouteId": "kc-driven-transition"
+              },
+              "Type": "STATE_MACHINE"
+            }
+          },
+          {
+            "Step 3": {
+              "Type": "STATE_MACHINE",
+              "StateMachine": {
+                "FlowState": {
+                  "Name": "Default Start Flow",
+                  "PageState": {
+                    "Name": "Start Page",
+                    "PageId": "START_PAGE",
+                    "Status": "TRANSITION_ROUTING"
+                  },
+                  "Version": 0,
+                  "FlowId": "00000000-0000-0000-0000-000000000000"
+                }
+              }
+            }
+          }
+        ],
+        "Response Id": "64cda44a-1e24-4e52-b183-b35fa327ef82",
+        "DataStore Execution Sequence": {
+          "executionResult": {
+            "faq_citation": false,
+            "ucs_fallback": true,
+            "response_reason": "NOT_GROUNDED",
+            "response_type": "UCS_FALLBACK",
+            "latency": 0,
+            "banned_phrase_check_type": "BANNED_PHRASE_CHECK_TYPE_UNSPECIFIED",
+            "website_citation": false,
+            "unstructured_citation": true,
+            "banned_phrase": "",
+            "language": "en"
+          },
+          "additionalInfo": {
+            "ucs_project_number": "452424605369",
+            "rewritten_query": "How much Melbourne home prices could rise in 2024?",
+            "tracking_id": "e83bb7b2-b65c-4568-beca-b04f6c7abc62",
+            "agent_project_number": "452424605369",
+            "user_query": "How much Melbourne home prices could rise in 2024?"
+          },
+          "steps": [
+            {
+              "responses": [
+                {
+                  "text": "I should search for information about Melbourne home prices in 2024.\nAction: Search\nAction Input: How much Melbourne home prices could rise in 2024?"
+                }
+              ],
+              "status": {
+                "code": "OK"
+              },
+              "name": "Query rewrite"
+            },
+            {
+              "name": "Responsible AI (with original query)",
+              "status": {
+                "code": "OK"
+              }
+            },
+            {
+              "info": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052",
+              "responses": [
+                {
+                  "text": "Ucs content search result with 1 answers, 10 passages, 0 segments",
+                  "debugId": "8fde8980-85ae-445c-bfd0-75a238a30c9a",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2024-interest-rate-changes-tipped-to-shape-2024-real-estate-market.html",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/158a2023a7c462349a149d2737a162cb"
+                },
+                {
+                  "debugId": "8a36222e-c92a-45d2-bdbf-e05ab855da00",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/fc8c487d48fd8d042bc1f5967292903f",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2023-decoding-2024-real-estates-trends-and-goals-revealed.html",
+                  "text": "Ucs content search result with 1 answers, 10 passages, 0 segments"
+                },
+                {
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/5383a570e20e1393256525e91b33524e",
+                  "debugId": "47e71f04-f691-4b6e-bbbb-ea79e9a80fa3",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2024-housing-upswing-carries-into-2024-with-national-dwelling-values-rising-0-4.html",
+                  "text": "Ucs content search result with 1 answers, 9 passages, 0 segments"
+                },
+                {
+                  "debugId": "b8c5eed3-8ad3-4d3f-b4b4-ae520fda8c3a",
+                  "text": "Ucs content search result with 3 answers, 10 passages, 0 segments",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/231128 - ANZ CoreLogic Housing Affordability Report.pdf",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/3ac902b22ffd0d99b3a9b2f7ca8b4a7d"
+                },
+                {
+                  "text": "Ucs content search result with 1 answers, 8 passages, 0 segments",
+                  "debugId": "f35f291b-aabe-4a65-b8d9-978d0cd8a94d",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2023-rate-hike-set-to-take-heat-out-of-housing-market.html",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/f2640433facd69c8f823d4478cdb2fac"
+                },
+                {
+                  "debugId": "805d86cb-edbf-42b0-a28e-74345482d277",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/2312_CoreLogic_2023_BestoftheBest_Report.pdf",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/712bee1fde85e57bfee933d5d7d7c839",
+                  "text": "Ucs content search result with 3 answers, 10 passages, 0 segments"
+                },
+                {
+                  "debugId": "3e13d5f3-ec37-4799-895f-4b888950c3ac",
+                  "text": "Ucs content search result with 3 answers, 10 passages, 0 segments",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-data-assets-pdf-file-0012-21207-corelogic-hvi-feb-2024-final-wcpi-pdf.pdf",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/e35384369ff6d8a997e176892e4ddd10"
+                },
+                {
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2022-home-value-index-housing-downturn-accelerates-as-falling-values-become-more-widespread.html",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/831b0945988ae67c78f3b8629fb461de",
+                  "text": "Ucs content search result with 1 answers, 10 passages, 0 segments",
+                  "debugId": "9b83e901-dbe0-4a1e-8778-64f5adcc6896"
+                },
+                {
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2023-growth-in-australian-construction-costs-lowest-since-2020.html",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/8a3adbb4065d0c671650036656370469",
+                  "text": "Ucs content search result with 1 answers, 9 passages, 0 segments",
+                  "debugId": "95f74e87-4bcd-4b58-98dc-a6203a7d7fe7"
+                },
+                {
+                  "text": "Ucs content search result with 3 answers, 10 passages, 0 segments",
+                  "debugId": "0b46db0b-5965-41cc-b63c-c72ea5b371fb",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-data-assets-pdf-file-0013-20614-corelogic-hvi-jan-2024-final-pdf.pdf",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/268281adafe93761b541cb93fa671949"
+                },
+                {
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/c640271d5b626f8aab01eba9e840e2d9",
+                  "text": "Ucs content search result with 1 answers, 10 passages, 0 segments",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2023-short-term-selling-on-the-rise-as-property-profits-fall.html",
+                  "debugId": "9278e580-627f-46aa-8376-f89ee2b20038"
+                },
+                {
+                  "text": "Ucs content search result with 1 answers, 10 passages, 0 segments",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2023-cost-growth-stabilising-within-residential-building-sector.html",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/35ab8c451dda387f560089a1045005b6",
+                  "debugId": "22d5f828-afed-4587-b422-9080f8f9fab0"
+                },
+                {
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2024-an-update-on-inflation-key-take-outs-for-the-housing-market.html",
+                  "debugId": "6afbca0a-e313-4cb8-a374-07e58c7c6913",
+                  "text": "Ucs content search result with 1 answers, 10 passages, 0 segments",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/63fc7cdf05e81b6a066784607d47a3b5"
+                },
+                {
+                  "debugId": "5a8b3c1d-827b-47ee-b547-d97a487b91d2",
+                  "text": "Ucs content search result with 3 answers, 10 passages, 0 segments",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/355ee03dd6186266a60b51d8fdb1879f",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/CL_AU_202312_CoreLogic_Pain_and_Gain_report_Final.pdf"
+                },
+                {
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/2f649e1512441f9a7a1438dace5b6e48",
+                  "text": "Ucs content search result with 1 answers, 10 passages, 0 segments",
+                  "debugId": "4a1380c8-a795-4fd9-b7d3-39890110f492",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2024-latest-cityscope-news-january-2024.html"
+                },
+                {
+                  "text": "Ucs content search result with 1 answers, 10 passages, 0 segments",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-data-assets-pdf-file-0021-16572-corelogic-hvi-aug-2023-final-pdf.pdf",
+                  "debugId": "1b5b4732-f5f7-432d-bcba-49ae45bf0814",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/939e80e86e09721b5095a268bcac2c33"
+                },
+                {
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/fa619737ef4dd0e85581fdc1625bab13",
+                  "text": "Ucs content search result with 1 answers, 10 passages, 0 segments",
+                  "debugId": "cc5290c6-374d-46a0-a888-559970973be4",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2023-five-things-to-know-about-the-fixed-rate-cliff.html"
+                },
+                {
+                  "debugId": "9e3a3df6-2e33-411c-bec4-32037c8bf5b1",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2024-auction-market-preview-4-february-2024.html",
+                  "text": "Ucs content search result with 1 answers, 9 passages, 0 segments",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/0261e6260c2ac2b627940b4edbf9995c"
+                },
+                {
+                  "text": "Ucs content search result with 1 answers, 10 passages, 0 segments",
+                  "debugId": "97bc3e2e-5f04-4331-a581-1b0d5bc6a3a8",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2023-is-doubling-the-queensland-first-home-buyer-grant-a-good-idea.html",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/617a98e5037da64af4a5457f5ee1221c"
+                },
+                {
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-data-assets-pdf-file-0019-12259-2208-corelogic-home-value-index-sep-22-final-pdf.pdf",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/8a54fe7c404b55cecdc3ca8b679c70d1",
+                  "text": "Ucs content search result with 3 answers, 10 passages, 0 segments",
+                  "debugId": "3a44527e-7225-4f4a-9734-8c182c77550a"
+                }
+              ],
+              "status": {
+                "code": "OK"
+              },
+              "name": "Call Search with original query [unstructured documents]"
+            },
+            {
+              "status": {
+                "code": "OK"
+              },
+              "responses": [
+                {
+                  "text": "Nearly half (46%) of respondents anticipate a rise in house prices this year of between 1-5%, while a further 13% expect an increase of more than 5%.",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/158a2023a7c462349a149d2737a162cb",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2024-interest-rate-changes-tipped-to-shape-2024-real-estate-market.html#:~:text=Nearly%20half%20(46%25),more%20than%205%25.",
+                  "debugId": "6554125f-d55f-4725-95da-e07533d7ab9b"
+                },
+                {
+                  "text": "A good portion foresee a rise in house prices, with 46% expecting a modest increase of 1-5%, and an additional 13% anticipating a more substantial rise of over 5%.",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/fc8c487d48fd8d042bc1f5967292903f",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2023-decoding-2024-real-estates-trends-and-goals-revealed.html#:~:text=A%20good%20portion,of%20over%205%25.",
+                  "debugId": "c9d6a339-25b6-40fe-b423-bbcc0ff4c3be"
+                },
+                {
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2024-housing-upswing-carries-into-2024-with-national-dwelling-values-rising-0-4.html#:~:text=Learn%20More%20Search,0.4%25%20in%20January.",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/5383a570e20e1393256525e91b33524e",
+                  "debugId": "9861f0a6-f7b5-4360-bb32-da1af6c96083",
+                  "text": "Learn More Search Login News & Research Housing upswing carries into 2024 with national dwelling values rising 0.4% Research News • 01 Feb 2024 Australia's housing upswing continued through the first month of 2024 with CoreLogic's national Home Value Index (HVI) rising 0.4% in January."
+                },
+                {
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/231128 - ANZ CoreLogic Housing Affordability Report.pdf#page=10",
+                  "text": "Total listings levels across the combined capital cities remain low relative to historic averages, but are now also gradually rising. FIGURE 12.",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/3ac902b22ffd0d99b3a9b2f7ca8b4a7d",
+                  "debugId": "fb0ec423-3135-4b65-b6a2-d7c31cd11917"
+                },
+                {
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/3ac902b22ffd0d99b3a9b2f7ca8b4a7d",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/231128 - ANZ CoreLogic Housing Affordability Report.pdf#page=12",
+                  "debugId": "02f80b54-6bdf-4e20-870c-8a5c1677d4a9",
+                  "text": "The pandemic period saw a notable drop in average household size from 2.55 people per household, to 2.49 as of 2023."
+                },
+                {
+                  "debugId": "b2d1b100-e9ba-4138-8554-39813defa938",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2024-interest-rate-changes-tipped-to-shape-2024-real-estate-market.html#:~:text=Nearly%20half%20(46%25),more%20than%205%25.",
+                  "text": "Nearly half (46%) of respondents anticipate a rise in house prices this year of between 1-5%, while a further 13% expect an increase of more than 5%.",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/158a2023a7c462349a149d2737a162cb"
+                },
+                {
+                  "debugId": "77a5fc9c-29c1-42ce-8482-8322fa684701",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/fc8c487d48fd8d042bc1f5967292903f",
+                  "text": "A good portion foresee a rise in house prices, with 46% expecting a modest increase of 1-5%, and an additional 13% anticipating a more substantial rise of over 5%.",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2023-decoding-2024-real-estates-trends-and-goals-revealed.html#:~:text=A%20good%20portion,of%20over%205%25."
+                },
+                {
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2024-housing-upswing-carries-into-2024-with-national-dwelling-values-rising-0-4.html#:~:text=Learn%20More%20Search,0.4%25%20in%20January.",
+                  "text": "Learn More Search Login News & Research Housing upswing carries into 2024 with national dwelling values rising 0.4% Research News • 01 Feb 2024 Australia's housing upswing continued through the first month of 2024 with CoreLogic's national Home Value Index (HVI) rising 0.4% in January.",
+                  "debugId": "84b3ba32-1870-4d29-949b-66e45cd50296",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/5383a570e20e1393256525e91b33524e"
+                },
+                {
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/3ac902b22ffd0d99b3a9b2f7ca8b4a7d",
+                  "text": "Total listings levels across the combined capital cities remain low relative to historic averages, but are now also gradually rising. FIGURE 12.",
+                  "debugId": "9ed2e38a-fd64-42c8-9fd1-1602943fabb3",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/231128 - ANZ CoreLogic Housing Affordability Report.pdf#page=10"
+                },
+                {
+                  "text": "The pandemic period saw a notable drop in average household size from 2.55 people per household, to 2.49 as of 2023.",
+                  "url": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/231128 - ANZ CoreLogic Housing Affordability Report.pdf#page=12",
+                  "document": "projects/452424605369/locations/global/collections/default_collection/dataStores/demo-real-estate-corelogic_1706737293052/branches/0/documents/3ac902b22ffd0d99b3a9b2f7ca8b4a7d",
+                  "debugId": "819734a9-8c1d-44bb-9b42-875a8c95d51d"
+                }
+              ],
+              "name": "Convert UCS results for original query"
+            },
+            {
+              "status": {
+                "code": "OK"
+              },
+              "responses": [
+                {
+                  "text": "The search results are relevant and [a] contains all information. I will follow answering guideline 3 [a].\nSource: [a]\nFinal Answer: According to a recent survey by CoreLogic, nearly half (46%) of respondents anticipate a rise in house prices in Melbourne this year of between 1-5%, while a further 13% expect an increase of more than 5%."
+                }
+              ],
+              "name": "ReAct turn"
+            },
+            {
+              "status": {
+                "code": "OK"
+              },
+              "info": "Source: 6554125f-d55f-4725-95da-e07533d7ab9b",
+              "name": "Parse ReAct Answer"
+            },
+            {
+              "status": {
+                "code": "OK"
+              },
+              "responses": [
+                {
+                  "text": "Grounding rejected by AutoAIS"
+                }
+              ],
+              "name": "Grounding"
+            },
+            {
+              "name": "Responsible AI (with result before grounding)",
+              "status": {
+                "code": "OK"
+              }
+            },
+            {
+              "status": {
+                "code": "OK"
+              },
+              "name": "Responsible AI (with original query and result)"
+            }
+          ]
+        },
+        "Session Id": "dfMessenger-284224a7-b67b-40ff-bcf0-4c07d2a41e6d",
+        "Triggered Transition Names": ["kc-driven-transition"]
+      },
+      "match": {
+        "matchType": "KNOWLEDGE_CONNECTOR",
+        "knowledgeConnectorAnswer": [
+          {
+            "answer": "I think you'll find this link helpful",
+            "generativePrediction": {
+              "snippets": [
+                {
+                  "uri": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2024-interest-rate-changes-tipped-to-shape-2024-real-estate-market.html#:~:text=Nearly%20half%20(46%25),more%20than%205%25.",
+                  "text": "Nearly half (46%) of respondents anticipate a rise in house prices this year of between 1-5%, while a further 13% expect an increase of more than 5%.",
+                  "title": "Interest rate changes tipped to shape 2024 real estate market | CoreLogic Australia"
+                },
+                {
+                  "uri": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2023-decoding-2024-real-estates-trends-and-goals-revealed.html#:~:text=A%20good%20portion,of%20over%205%25.",
+                  "text": "A good portion foresee a rise in house prices, with 46% expecting a modest increase of 1-5%, and an additional 13% anticipating a more substantial rise of over 5%.",
+                  "title": "Decoding 2024: Real Estate's trends and goals revealed | CoreLogic Australia"
+                },
+                {
+                  "uri": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/www-corelogic-com-au-news-research-news-2024-housing-upswing-carries-into-2024-with-national-dwelling-values-rising-0-4.html#:~:text=Learn%20More%20Search,0.4%25%20in%20January.",
+                  "text": "Learn More Search Login News & Research Housing upswing carries into 2024 with national dwelling values rising 0.4% Research News • 01 Feb 2024 Australia's housing upswing continued through the first month of 2024 with CoreLogic's national Home Value Index (HVI) rising 0.4% in January.",
+                  "title": "Housing upswing carries into 2024 with national dwelling values rising 0.4% | CoreLogic Australia"
+                },
+                {
+                  "uri": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/231128 - ANZ CoreLogic Housing Affordability Report.pdf#page=10",
+                  "text": "Total listings levels across the combined capital cities remain low relative to historic averages, but are now also gradually rising. FIGURE 12.",
+                  "title": "231128 - ANZ CoreLogic Housing Affordability Report"
+                },
+                {
+                  "uri": "https://storage.cloud.google.com/demo-real-estate-corelogic-v1/231128 - ANZ CoreLogic Housing Affordability Report.pdf#page=12",
+                  "text": "The pandemic period saw a notable drop in average household size from 2.55 people per household, to 2.49 as of 2023.",
+                  "title": "231128 - ANZ CoreLogic Housing Affordability Report"
+                }
+              ],
+              "groundingInfo": {
+                "score": "MEDIUM",
+                "snippetsSupportingIndices": [
+                  {
+                    "indices": [1, 0]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "advancedSettings": {
+        "loggingSettings": {
+          "disableLogging": true
+        }
+      },
+      "currentFlow": {
+        "name": "projects/project-xiaobao-20240126/locations/global/agents/bae6ed2d-ee81-438a-b294-c944a7abba9f/flows/00000000-0000-0000-0000-000000000000",
+        "displayName": "Default Start Flow"
+      },
+      "generativeInfo": {
+        "actionTracingInfo": {
+          "name": "projects/project-xiaobao-20240126/locations/global/agents/bae6ed2d-ee81-438a-b294-c944a7abba9f/playbooks/-/examples/-",
+          "actions": [
+            {
+              "userUtterance": {
+                "text": "How much Melbourne home prices could rise in 2024?"
+              }
+            },
+            {
+              "agentUtterance": {
+                "text": "I think you'll find this link helpful"
+              }
+            }
+          ],
+          "conversationState": "OUTPUT_STATE_PENDING"
+        }
+      }
+    },
+    "responseType": "FINAL",
+    "ulmCalls": 3
+  }
+}

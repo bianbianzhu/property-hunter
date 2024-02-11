@@ -1,17 +1,23 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { extractBookTitle } from "../utils";
-  import { type InfoCardEventDetail, addSavedItem } from "../store";
+  import { compareLinks } from "../utils";
+  import { addSavedItem } from "../store/saved-response";
   import { MASK_UNIQUE_ID, maskGenerator } from "./generated-elements/mask";
   import {
     CARD_ACTION_BTN_UNIQUE_ID,
     cardActionBtnGenerator,
   } from "./generated-elements/cardActionBtn";
-
-  // TODO: use zod to validate the return type
-  function isCustomEvent(event: Event): event is CustomEvent<InfoCardEventDetail> {
-    return "detail" in event;
-  }
+  import {
+    isCustomEvent,
+    type DfResponseEventDetail,
+    type DfInfoCardEventDetail,
+  } from "../types/dfMessenger-types";
+  import {
+    addResponse,
+    dfMessengerResponseState,
+    setCustomCardClicked,
+  } from "../store/dfMessenger-response";
+  import { get } from "svelte/store";
 
   onMount(() => {
     // querySelector seems not able to select through a shadowRoot layer
@@ -27,8 +33,31 @@
     // this works
     // const botEntries = dfMessengerListContent?.getElementsByClassName("entry bot") ?? [];
 
+    dfMessenger?.addEventListener("df-response-received", function (event) {
+      if (!isCustomEvent<DfResponseEventDetail>(event)) {
+        return;
+      }
+
+      if (event.detail.raw.queryResult.match.matchType !== "KNOWLEDGE_CONNECTOR") {
+        return;
+      }
+
+      addResponse({
+        id: event.detail.raw.responseId,
+        botMessages: event.detail.messages,
+        userQuery: event.detail.raw.queryResult.text,
+        retrievedSnippets:
+          event.detail.raw.queryResult.match.knowledgeConnectorAnswer[0].generativePrediction
+            .snippets,
+        hasCustomCardClicked: false,
+        saved: false,
+      });
+
+      // console.log(get(dfMessengerResponseState));
+    });
+
     dfMessenger?.addEventListener("df-info-card-clicked", function (event) {
-      if (!isCustomEvent(event)) {
+      if (!isCustomEvent<DfInfoCardEventDetail>(event)) {
         return;
       }
 
@@ -37,6 +66,8 @@
       if (!actionLink) {
         throw new Error("actionLink is not provided");
       }
+
+      setCustomCardClicked(actionLink);
 
       // When df-info-card is clicked, it means we already have user and bot entries.
       // If outside the listener callback, only getElementsByClassName('entry bot') works.
@@ -47,47 +78,50 @@
         return;
       }
 
-      const links = [...botEntries].map((entry) =>
-        entry
-          .querySelector("df-messenger-utterance")
-          ?.shadowRoot?.querySelector("df-card")
-          ?.shadowRoot?.querySelector("df-title")
-          ?.shadowRoot?.querySelector(`a`)
+      // Get all cards from the bot entries and find the one that matches the actionLink
+      const cards = [...botEntries].map((entry) =>
+        entry.querySelector("df-messenger-utterance")?.shadowRoot?.querySelector("df-card")
       );
 
-      // For debugging
-      // const dfMessengerUtterance = botEntries[0].querySelector("df-messenger-utterance");
-      // const dfCard = dfMessengerUtterance?.shadowRoot?.querySelector("df-card");
-      // const dfTitle = dfCard?.shadowRoot?.querySelector("df-title");
-      // const link = dfTitle?.shadowRoot?.querySelector(`a[href="${actionLink}"`);
+      const selectedCard = cards.find((card) => {
+        if (!card) {
+          return false;
+        }
 
-      // Find the link that matches the actionLink - the link that was clicked
-      const selectedLink = links.find((link) => link?.href === actionLink) as HTMLAnchorElement;
+        // the `a` tag
+        const link = card.shadowRoot?.querySelector("df-title")?.shadowRoot?.querySelector(`a`);
 
-      // Add a mask to the selected link
-      // 1. modify the position of the selected link to relative, so the mask can be covered on top of it
-      selectedLink.style.position = "relative";
-
-      const mask = maskGenerator(document);
-
-      // Append the mask to the target element only once
-      if (!selectedLink.querySelector(`#${MASK_UNIQUE_ID}`)) {
-        selectedLink.appendChild(mask);
-      }
-
-      const onClick = (e: MouseEvent) => {
-        e.preventDefault();
-        addSavedItem({ title, actionLink, purchaseLink: url.href });
-      };
-
-      const addBtn = cardActionBtnGenerator({
-        document,
-        onClick,
+        return compareLinks(link?.href, actionLink);
       });
 
-      if (!selectedLink.querySelector(`#${CARD_ACTION_BTN_UNIQUE_ID}`)) {
-        selectedLink.appendChild(addBtn);
+      // Append the mask to the target card only once
+      const cardWrapper = selectedCard?.shadowRoot?.querySelector(
+        ".card-wrapper"
+      ) as HTMLDivElement;
+
+      if (!cardWrapper) {
+        throw new Error("cardWrapper is not found");
       }
+      cardWrapper.style.position = "relative";
+
+      const mask = maskGenerator(document);
+      if (!cardWrapper.querySelector(`#${MASK_UNIQUE_ID}`)) {
+        cardWrapper.appendChild(mask);
+      }
+
+      // const onClick = (e: MouseEvent) => {
+      //   e.preventDefault();
+      //   addSavedItem({ title, actionLink, purchaseLink: url.href });
+      // };
+
+      // const addBtn = cardActionBtnGenerator({
+      //   document,
+      //   onClick,
+      // });
+
+      // if (!selectedLink.querySelector(`#${CARD_ACTION_BTN_UNIQUE_ID}`)) {
+      //   selectedLink.appendChild(addBtn);
+      // }
 
       // console.log(get(savedItemState));
     });
