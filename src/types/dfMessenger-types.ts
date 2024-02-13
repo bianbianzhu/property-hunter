@@ -53,7 +53,7 @@ export type DfResponseEventDetail = {
   };
 };
 
-type Message =
+export type Message =
   | {
       type: "text";
       text: string;

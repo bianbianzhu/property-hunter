@@ -10,7 +10,7 @@ type RawDfMessengerResponse = Pick<DfResponseEventDetail, "messages"> &
   > &
   Pick<DfResponseEventDetail["raw"], "responseId">;
 
-type DfMessengerResponse = RenameByT<
+export type DfMessengerResponse = RenameByT<
   {
     messages: "botMessages";
     text: "userQuery";
