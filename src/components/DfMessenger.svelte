@@ -130,8 +130,6 @@
 </script>
 
 <div class="h-full">
-  <script
-    src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
   <df-messenger
     project-id={import.meta.env.VITE_PROJECT_ID}
     agent-id={import.meta.env.VITE_AGENT_ID}
