@@ -18,6 +18,7 @@
     setCustomCardClicked,
   } from "../store/dfMessenger-response";
   import { get } from "svelte/store";
+  import HistoryBtn from "./HistoryBtn.svelte";
 
   onMount(() => {
     // querySelector seems not able to select through a shadowRoot layer
@@ -142,5 +143,8 @@
       chat-title="Ask AI Assistant: Get Instant Help"
       bot-writing-text="..."
       placeholder-text="How can I assist you today? Type your question here..." />
+    <div class="absolute right-3 top-3 flex items-center justify-center">
+      <HistoryBtn total={$dfMessengerResponseState.entities.length} />
+    </div>
   </df-messenger>
 </div>

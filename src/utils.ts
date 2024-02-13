@@ -1,6 +1,3 @@
-const START = "books-toscrape-com-catalogue" as const;
-const END = "-index-html" as const;
-
 export function scrollToBottom() {
   window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
 }

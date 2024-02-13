@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { savedItemState, showBookShelf } from "../store/saved-response";
+  import { savedItemState, showSavedItems } from "../store/saved-response";
 
-  const toggleBookShelf = () => {
-    showBookShelf.update((n) => !n);
+  const toggleSavedItems = () => {
+    showSavedItems.update((n) => !n);
   };
 </script>
 
-<button class="relative rounded bg-amber-500 p-3 hover:bg-amber-600" on:click={toggleBookShelf}>
+<button class="relative rounded bg-amber-500 p-3 hover:bg-amber-600" on:click={toggleSavedItems}>
   <svg
     fill="#FEF08A"
     width="24px"

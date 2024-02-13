@@ -8,7 +8,7 @@
   import TopNav from "../components/TopNav.svelte";
   import BottomBar from "../components/BottomBar.svelte";
   import BookShelf from "../components/BookShelf.svelte";
-  import { savedItemState, showBookShelf } from "../store/saved-response";
+  import { savedItemState, showSavedItems } from "../store/saved-response";
   import ShoppingCartBtn from "../components/ShoppingCartBtn.svelte";
 
   let showFloatingActionBtn: Boolean = false;
@@ -44,7 +44,7 @@
     // Write and send sample questions to chatbot
     // sendInput("Hello", 2000);
     sendInput("How much Melbourne home prices could rise in 2024?", 100);
-    sendInput("What is the housing affordability in 2023", 5000);
+    sendInput("What do you make of the changes in Melbourne's housing market in 2023", 5000);
 
     const resizeObserver = new ResizeObserver((entries) => {
       // entries[0].target.clientHeight is equal to document.body.scrollHeight
@@ -99,7 +99,7 @@
     <ShoppingCartBtn />
   </div>
 
-  {#if $showBookShelf}
+  {#if $showSavedItems}
     <div class="fixed bottom-24 left-24">
       <BookShelf />
     </div>

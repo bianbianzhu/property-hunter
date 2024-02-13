@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { deleteSavedItem, savedItemState, showBookShelf } from "../store/saved-response";
+  import { deleteSavedItem, savedItemState, showSavedItems } from "../store/saved-response";
   import { capitalize } from "../utils";
 
   const close = () => {
-    showBookShelf.update(() => false);
+    showSavedItems.update(() => false);
   };
 
   const remove = (actionLink: string) => () => deleteSavedItem(actionLink);

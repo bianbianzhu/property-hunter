@@ -41,4 +41,4 @@ export const deleteSavedItem = (actionLink: string) => {
   });
 };
 
-export let showBookShelf = writable(false);
+export let showSavedItems = writable(false);
