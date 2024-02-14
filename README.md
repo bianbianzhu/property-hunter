@@ -1,31 +1,25 @@
-# Vertex AI Conversation
+# Property Hunter
 
-## Overview
+## 1. Introduction
 
-[Data Store Agent](https://cloud.google.com/generative-ai-app-builder/docs/agent-intro)
-is a feature within
+Property Hunter is a web app that demonstrates the capabilities of
 [Vertex AI Conversation](https://cloud.google.com/generative-ai-app-builder)
 that is built on top of functionality in
 [Dialogflow CX](https://cloud.google.com/dialogflow).
 
-![Vertex AI Conversation Demo](static/vertex-ai-conversation.png)
+![Vertex AI Conversation Demo](src/assets/property-hunter.gif)
 
-With a Data Store Agent, you can provide a website domain, structured data, or
-unstructured data, then the Data Store Agent parses your content and creates a
-virtual agent that is powered by data stores and large language models. Your
-customers and end users can then have conversations with the agent and ask
-questions about the content. Refer to the
-[Data Store Agent documentation](https://cloud.google.com/generative-ai-app-builder/docs/agent-usage)
-and codelab to
-[Create a Generative Chat App with Vertex AI Conversation](https://codelabs.developers.google.com/codelabs/vertex-ai-conversation)
-for more information.
+Using a Data Store Agent, you have the ability to input a website domain, structured data, or unstructured data, after which the Agent processes your content to generate a virtual agent fueled by data stores and extensive language models. This enables your customers and end users to engage in conversations with the agent, asking questions pertaining to the content provided.
 
-## Steps to build the web app
+![architecture](src/assets/architecture.png)
 
-1. Install [Node.js](https://nodejs.org/en) using your preferred method or
-   package manager
-1. From this directory, run `npm install`
-1. Run `npm run build` to generate the static site in the `build` directory
+For detailed information about how to set up the agent, please refer to this Medium article: [How to build your own AI Chatbot within 5 minutes using Google LLM and your private knowledge?](https://medium.com/@lizhuohang.selina/how-to-build-your-own-ai-chatbot-within-5-minutes-using-google-llm-and-your-private-knowledge-eed4b6852917)
+
+## Steps to run the web app locally
+
+1. Clone this repository
+1. Run `yarn` to install the dependencies
+1. Run `yarn dev` to start the development server
 
 ## Steps to deploy the web app to Firebase
 
