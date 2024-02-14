@@ -1,12 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { compareLinks } from "../utils";
-  import { addSavedItem } from "../store/saved-response";
   import { MASK_UNIQUE_ID, maskGenerator } from "./generated-elements/mask";
-  import {
-    CARD_ACTION_BTN_UNIQUE_ID,
-    cardActionBtnGenerator,
-  } from "./generated-elements/cardActionBtn";
   import {
     isCustomEvent,
     type DfResponseEventDetail,
@@ -17,7 +12,6 @@
     dfMessengerResponseState,
     setCustomCardClicked,
   } from "../store/dfMessenger-response";
-  import { get } from "svelte/store";
   import HistoryBtn from "./HistoryBtn.svelte";
 
   onMount(() => {
@@ -53,8 +47,6 @@
         hasCustomCardClicked: false,
         saved: false,
       });
-
-      // console.log(get(dfMessengerResponseState));
     });
 
     dfMessenger?.addEventListener("df-info-card-clicked", function (event) {
@@ -109,22 +101,6 @@
       if (!cardWrapper.querySelector(`#${MASK_UNIQUE_ID}`)) {
         cardWrapper.appendChild(mask);
       }
-
-      // const onClick = (e: MouseEvent) => {
-      //   e.preventDefault();
-      //   addSavedItem({ title, actionLink, purchaseLink: url.href });
-      // };
-
-      // const addBtn = cardActionBtnGenerator({
-      //   document,
-      //   onClick,
-      // });
-
-      // if (!selectedLink.querySelector(`#${CARD_ACTION_BTN_UNIQUE_ID}`)) {
-      //   selectedLink.appendChild(addBtn);
-      // }
-
-      // console.log(get(savedItemState));
     });
   });
 </script>
