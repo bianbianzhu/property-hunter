@@ -23,44 +23,23 @@ For detailed information about how to set up the agent, please refer to this Med
 
 ## Steps to deploy the web app to Firebase
 
+1. Run `yarn build` to build the app
 1. Navigate to the [Firebase console](https://console.firebase.google.com/)
 1. Provision Firebase on a new or existing GCP project
 1. In Firebase console, go to Hosting and add a new site (e.g.,
    `your-firebase-app-name`)
 1. Install the [firebase CLI](https://firebase.google.com/docs/cli)
-1. Run `firebase init` in the app root and follow the prompts to select
-   `Hosting`, use the `build` directory, and confirm `N` to the followup
+1. Delete the current `.firebaserc` file in the app root
+1. Run `firebase init hosting` in the app root and follow the prompts, use the `build` directory, and confirm `N` to the followup
    questions about rewrites, deploys, and the 404 and index pages.
 1. Run
-   `firebase target:apply hosting your-firebase-app-name your-firebase-app-name`
-   where `your-firebase-app-name` is the name of the Firebase Hosting site that
-   you created in an earlier step
-1. To configure the default deploy target, add a line to your `firebase.json`
-   with the name of your Firebase Hosting site, such as:
-
-   ```json
-   {
-     "hosting": {
-       "target": "your-firebase-app-name",  # <--- Add this line
-       "public": "build",
-       "ignore": [
-         "firebase.json",
-         "**/.*",
-         "**/node_modules/**"
-       ]
-     }
-   }
-   ```
-
-1. Run `firebase deploy`
+   `firebase deploy --only hosting`
 
 ## Access the app
 
-In your browser, navigate to your deployed app using a URL similar to:
+In your browser, navigate to the following URL to access the web app:
 
-[https://vertex-ai-conversation.web.app/](https://vertex-ai-conversation.web.app/)
-
-Congratulations, you've successfully deployed the Vertex AI Conversation Demo!
+[Property Hunter](https://property-hunter-50022.web.app)
 
 ## Additional resources
 
