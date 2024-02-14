@@ -3,8 +3,6 @@
   import GradientWave from "../../components/GradientWave.svelte";
   import TopNav from "../../components/TopNav.svelte";
   import ListItem from "../../components/ListItem.svelte";
-
-  console.log($dfMessengerResponseState);
 </script>
 
 <TopNav />

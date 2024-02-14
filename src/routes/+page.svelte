@@ -7,9 +7,8 @@
   import DfMessenger from "../components/DfMessenger.svelte";
   import TopNav from "../components/TopNav.svelte";
   import BottomBar from "../components/BottomBar.svelte";
-  import BookShelf from "../components/BookShelf.svelte";
+  import SavedItems from "../components/SavedItems.svelte";
   import { savedItemState, showSavedItems } from "../store/saved-response";
-  import ShoppingCartBtn from "../components/ShoppingCartBtn.svelte";
 
   let showFloatingActionBtn: Boolean = false;
 
@@ -95,13 +94,9 @@
 {/if}
 
 {#if $savedItemState.entities.length > 0}
-  <div class="fixed bottom-10 left-10">
-    <ShoppingCartBtn />
-  </div>
-
   {#if $showSavedItems}
     <div class="fixed bottom-24 left-24">
-      <BookShelf />
+      <SavedItems />
     </div>
   {/if}
 {/if}
