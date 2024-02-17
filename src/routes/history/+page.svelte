@@ -15,7 +15,7 @@
   </div>
 {:else}
   <div
-    class="justify-cente container relative mx-auto flex min-h-screen max-w-[60vw] items-start pb-8">
+    class="container relative mx-auto flex min-h-screen max-w-[90vw] items-start justify-center pb-8 md:max-w-[60vw]">
     <ul class="mt-[6vh] flex flex-col gap-2 rounded bg-slate-50 p-4 shadow-lg">
       {#each $dfMessengerResponseState.entities as response, i (response.id)}
         <ListItem {response} index={i} />

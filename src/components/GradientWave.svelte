@@ -4,7 +4,7 @@
   id="gradient-wave-svg"
   viewBox="0 0 1440 10"
   xmlns="http://www.w3.org/2000/svg"
-  class="fixed bottom-0 left-0 -z-[1] transition delay-150 duration-300 ease-in-out"
+  class="fixed bottom-0 left-0 -z-[1] hidden transition delay-150 duration-300 ease-in-out md:block"
   ><style>
     .path-0 {
       animation: pathAnim-0 30s;

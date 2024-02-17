@@ -1,7 +1,5 @@
 <script lang="ts">
-  import { P } from "flowbite-svelte";
   import type { DfMessengerResponse } from "../store/dfMessenger-response";
-  import type { Message } from "../types/dfMessenger-types";
 
   export let response: DfMessengerResponse;
   export let index: number;
@@ -17,13 +15,13 @@
 
 <li class="w-full">
   <button
-    class="flex w-full transform cursor-pointer select-none items-center rounded-md bg-orange-100 p-4 transition duration-500 ease-in-out hover:-translate-y-1 hover:shadow-lg"
+    class="flex w-full transform cursor-pointer select-none flex-col items-center rounded-md bg-orange-100 p-4 transition duration-500 ease-in-out hover:-translate-y-1 hover:shadow-lg md:flex-row"
     on:click={toggleCollapse}>
     <div
-      class="mr-4 flex h-10 w-10 flex-col items-center justify-center rounded-md bg-amber-500 text-white">
+      class="mr-0 flex h-10 w-10 items-center justify-center rounded-md bg-amber-500 text-white md:mr-4">
       {index + 1}
     </div>
-    <div class="mr-16 flex-1">
+    <div class="mr-0 flex-1 md:mr-16">
       <div class="text-start font-medium">{userQuery}</div>
       <div class="text-start text-sm text-gray-600">
         {botMessages?.[1]?.type === "customCard"
@@ -41,9 +39,9 @@
     </svg>
   </button>
   {#if !isCollapsed}
-    <h3 class="relative mb-2 mt-2 pl-4 text-lg font-thin text-zinc-500">
+    <h3 class="relative mb-2 mt-2 overflow-hidden pl-4 text-lg font-thin text-zinc-500">
       Relevant Readings
-      <div class="absolute left-[150px] top-[50%] h-[1px] w-[82.5%] bg-zinc-300" />
+      <div class="absolute left-[175px] top-[50%] h-[1px] w-full bg-zinc-300" />
     </h3>
 
     <ul>

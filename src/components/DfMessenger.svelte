@@ -105,7 +105,7 @@
   });
 </script>
 
-<div class="h-full">
+<div class="h-[50vh] md:h-full">
   <df-messenger
     project-id={import.meta.env.VITE_PROJECT_ID}
     agent-id={import.meta.env.VITE_AGENT_ID}
