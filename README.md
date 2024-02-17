@@ -19,6 +19,18 @@ For detailed information about how to set up the agent, please refer to this Med
 
 1. Clone this repository
 1. Run `yarn` to install the dependencies
+1. Create a `.env` file in the root of the project and add the following
+   environment variables:
+
+   ```env
+   VITE_PROJECT_ID=your-gcp-project-id
+   VITE_AGENT_ID=your-agent-id
+   ```
+
+   Replace `your-gcp-project-id` and `your-agent-id` with the appropriate values.
+
+   You can find these values in the Dialogflow CX console. For details, see the Medium article linked above.
+
 1. Run `yarn dev` to start the development server
 
 ## Steps to deploy the web app to Firebase
