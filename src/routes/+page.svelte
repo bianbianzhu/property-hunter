@@ -56,12 +56,14 @@
 
 <TopNav />
 
-<div class="container mx-auto flex flex-col items-center">
+<div class="container mx-auto flex flex-col items-center px-4 md:px-0">
   <div class="max-h-full w-full">
-    <Heading tag="h1" class="mb-2 mt-[5vh] text-center text-5xl font-bold leading-snug"
+    <Heading
+      tag="h1"
+      class="mb-2 mt-[5vh] text-center text-3xl font-bold leading-snug md:text-4xl lg:text-5xl"
       >Property Hunter, Your Ultimate Property Guide.</Heading>
-    <div class="mt-[8vh] flex min-h-[55vh] gap-16">
-      <div class="w-2/5">
+    <div class="mt-[8vh] flex min-h-[55vh] flex-col gap-16 md:flex-row">
+      <div class="w-full md:w-2/5">
         <p class="mt-5 font-normal text-gray-500 dark:text-gray-400">
           Discover. Connect. Secure Your Dream Home.
         </p>
@@ -74,7 +76,7 @@
         <DialogBox prompt="which suburb in melbourne grows the fastest?" boxWidth={75} />
       </div>
 
-      <div class="w-3/5">
+      <div class="w-full md:w-3/5">
         <DfMessenger />
       </div>
     </div>
@@ -88,7 +90,7 @@
 <GradientWave />
 
 {#if showFloatingActionBtn}
-  <div class="fixed bottom-10 right-10">
+  <div class="fixed bottom-10 right-10 hidden md:flex">
     <FloatingActionBtn />
   </div>
 {/if}
