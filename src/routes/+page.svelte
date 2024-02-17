@@ -11,7 +11,6 @@
   import { savedItemState, showSavedItems } from "../store/saved-response";
 
   let showFloatingActionBtn: boolean = false;
-  let isMobile: boolean = false;
 
   function sendInput(text: string, time: number) {
     const dfMessenger = document.querySelector("df-messenger");
@@ -40,10 +39,6 @@
     }, time + 1000);
   }
 
-  const resizeHandler = () => {
-    isMobile = innerWidth < 450;
-  };
-
   onMount(() => {
     // Write and send sample questions to chatbot
     // sendInput("Hello", 2000);
@@ -56,8 +51,6 @@
     });
 
     resizeObserver.observe(document.body);
-
-    window.addEventListener("resize", resizeHandler);
   });
 </script>
 
@@ -78,13 +71,9 @@
         <Heading tag="h5" class="my-2 mt-6 text-amber-500">How it works</Heading>
         Ask a question and get a response from our AI agent. For example:
 
-        <DialogBox
-          prompt="what is the housing market like in Melbourne?"
-          boxWidth={isMobile ? 100 : 75} />
+        <DialogBox prompt="what is the housing market like in Melbourne?" boxWidth={75} />
         <span class="text-bold font-bold">Or</span>
-        <DialogBox
-          prompt="which suburb in melbourne grows the fastest?"
-          boxWidth={isMobile ? 100 : 75} />
+        <DialogBox prompt="which suburb in melbourne grows the fastest?" boxWidth={75} />
       </div>
 
       <div class="w-full md:w-3/5">
