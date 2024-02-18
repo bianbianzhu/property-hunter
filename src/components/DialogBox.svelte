@@ -1,9 +1,30 @@
 <script lang="ts">
+  import { onMount } from "svelte";
+  import { debounce } from "../utils";
   export let prompt = "Suggest me a book?";
   export let boxWidth = 70;
+
+  let isMobile: boolean = false;
+
+  onMount(() => {
+    const checkSize = () => {
+      isMobile = window.innerWidth < 400;
+    };
+
+    const debouncedCheckSize = debounce(checkSize, 1000);
+
+    window.addEventListener("resize", debouncedCheckSize);
+
+    return () => {
+      // this function is called when the component is destroyed
+      window.removeEventListener("resize", debouncedCheckSize);
+    };
+  });
 </script>
 
-<div class={`relative my-3 rounded-lg bg-white p-3 shadow-lg`} style="width: {boxWidth}%;">
+<div
+  class={`relative my-3 rounded-lg bg-white p-3 shadow-lg`}
+  style="width: {isMobile ? '100' : boxWidth}%;">
   <div
     class="absolute -bottom-3 -right-2 flex h-6 w-6 rotate-90 items-center justify-center rounded-full bg-amber-500 text-white">
     <svg

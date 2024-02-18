@@ -31,3 +31,18 @@ export const compareLinks = (
 
   return aHrefUrl.href === actionLinkUrl.href;
 };
+
+export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(
+  callback: T,
+  delay: number
+): (...args: Parameters<T>) => void {
+  let timeout: ReturnType<typeof setTimeout> | undefined;
+  return (...args: Parameters<typeof callback>) => {
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+    timeout = setTimeout(() => {
+      callback(...args);
+    }, delay);
+  };
+}
