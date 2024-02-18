@@ -7,12 +7,7 @@
     type DfResponseEventDetail,
     type DfInfoCardEventDetail,
   } from "../types/dfMessenger-types";
-  import {
-    addResponse,
-    dfMessengerResponseState,
-    setCustomCardClicked,
-  } from "../store/dfMessenger-response";
-  import HistoryBtn from "./HistoryBtn.svelte";
+  import { addResponse, setCustomCardClicked } from "../store/dfMessenger-response";
 
   onMount(() => {
     // querySelector seems not able to select through a shadowRoot layer
@@ -117,8 +112,5 @@
       chat-title="Ask AI Assistant: Get Instant Help"
       bot-writing-text="..."
       placeholder-text="How can I assist you today? Type your question here..." />
-    <div class="absolute right-3 top-3 flex items-center justify-center">
-      <HistoryBtn total={$dfMessengerResponseState.entities.length} />
-    </div>
   </df-messenger>
 </div>

@@ -8,7 +8,9 @@
   import TopNav from "../components/TopNav.svelte";
   import BottomBar from "../components/BottomBar.svelte";
   import SavedItems from "../components/SavedItems.svelte";
+  import HistoryBtn from "../components/HistoryBtn.svelte";
   import { savedItemState, showSavedItems } from "../store/saved-response";
+  import { dfMessengerResponseState } from "../store/dfMessenger-response";
 
   let showFloatingActionBtn: boolean = false;
 
@@ -62,7 +64,7 @@
       tag="h1"
       class="mb-2 mt-[5vh] text-center text-3xl font-bold leading-snug md:text-4xl lg:text-5xl"
       >Property Hunter, Your Ultimate Property Guide.</Heading>
-    <div class="mt-[8vh] flex min-h-[55vh] flex-col gap-16 md:flex-row">
+    <div class="mt-[2vh] flex min-h-[55vh] flex-col gap-16 md:mt-[8vh] md:flex-row">
       <div class="w-full md:w-2/5">
         <p class="mt-5 text-center font-normal text-gray-500 dark:text-gray-400 md:text-start">
           Discover. Connect. Secure Your Dream Home.
@@ -76,7 +78,10 @@
         <DialogBox prompt="which suburb in melbourne grows the fastest?" boxWidth={75} />
       </div>
 
-      <div class="w-full md:w-3/5">
+      <div class="relative w-full md:w-3/5">
+        <div class="absolute right-3 top-3 z-[1] flex items-center justify-center">
+          <HistoryBtn total={$dfMessengerResponseState.entities.length} />
+        </div>
         <DfMessenger />
       </div>
     </div>
